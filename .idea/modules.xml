@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://D:/Java/IdeaProjects/BlueMountain.iml" filepath="D:/Java/IdeaProjects/BlueMountain.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MountainLan.iml" filepath="$PROJECT_DIR$/MountainLan.iml" />
-    </modules>
-  </component>
-</project>
