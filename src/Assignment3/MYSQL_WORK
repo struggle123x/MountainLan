@@ -1,0 +1,69 @@
+package assignment4;
+public class Mysql1{
+    /*
+1.
+CREATE TABLE employees(
+        emp_no int NOT NULL AUTO_INCREMENT,
+        birth_date char(50) NOT NULL,
+        first_name char(50) NOT NULL,
+        last_name char(50) NOT NULL,
+        gender char(2) NOT NULL,
+        hire_date char(20) NOT NULL,
+        PRIMARY KEY(emp_no)
+        )ENGINE=InnoDB;
+
+
+        INSERT INTO employees(emp_no,birth_date,first_name,last_name,gender,hire_date)
+        VALUES('10001','1953-09-02','Georgi','Facello','M','1986-06-26'),
+        ('10002','1964-06-02','Bezalel','Simmel','F','1985-11-21'),
+        ('10003','1959-12-03','Parto','Bamford','M','1986-08-28'),
+        ('10004','1954-05-01','Christian','Koblick','M','1986-12-01');
+
+        SELECT emp_no,birth_date,first_name,last_name,gender,hire_date
+         FROM employees
+         WHERE hire_date IN (SELECT MAX(hire_date) FROM employees);
+
+
+
+ */
+
+/**
+ * 2.
+ * SELECT film.film_id,title
+ * FROM film
+ * WHERE film.film_id NOT IN(select film_id from film_category);
+ *
+ * SELECT film.film_id,title
+ * FROM film LEFT JOIN film_category
+ * ON film.film_id = film_category.film_id
+ * WHERE film_category.film_id IS NULL;
+ */
+
+/*
+3.
+SELECT *
+FROM employees
+LIMIT 5,5;
+ */
+
+
+/*
+4.
+ALTER TABLE actor
+ADD UNIQUE INDEX uniq_idx_firstname(first_name);
+
+ALTER TABLE actor
+ADD INDEX idx_lastnam(last_name);
+
+SHOW INDEX
+FROM actor;
+ */
+
+/*
+5.
+SELECT a.id,a.number,(SELECT COUNT(distinct b.number) FROM pn b WHERE b.number>=a.number ) t_rank
+FROM pn a
+ORDER BY a.number DESC,
+a.id ASC;
+ */
+}
